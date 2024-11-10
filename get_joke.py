@@ -2,6 +2,7 @@ import aiohttp
 import asyncio
 
 async def fetch_joke():
+    # Получение шутки
     url = "https://official-joke-api.appspot.com/random_joke"
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
