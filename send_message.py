@@ -2,8 +2,8 @@ import telegram
 import asyncio
 import credentials
 
-my_token = credentials.my_token
-my_chat_id = credentials.my_chat_id
+my_token = credentials.buddy_token
+my_chat_id = credentials.chat_for_test
 
 async def send(msg, chat_id, token=my_token):
     """
@@ -18,6 +18,7 @@ async def send(msg, chat_id, token=my_token):
 
 def run_send_message(MessageString):
     # отправка сообщения MessageString в чат
+    # msg=MessageString, chat_id=my_chat_id, token=my_token
     asyncio.run(send(msg=MessageString, chat_id=my_chat_id, token=my_token))
 
 

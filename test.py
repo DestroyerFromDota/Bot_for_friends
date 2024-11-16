@@ -3,15 +3,8 @@ from get_joke import get_joke
 import time
 
 def joke():
-    # Получаем шутку с помощью get_joke() из get_joke.py
-    # и отправляем run_send_message() из send_message.py
+    # Получаем шутку с помощью get_joke() из get_joke.py. Отравляем вопрос в чат
+    # и печатем ответ для перехвата сабпроцессом основым ядром программы
     run_send_message(get_joke()[0])
-    time.sleep(10)
-    run_send_message(f'Правильный ответ:\n{get_joke()[1]}')
-
-
-
-
-
-
-# joke()
+    print({get_joke()[1]})
+joke()
